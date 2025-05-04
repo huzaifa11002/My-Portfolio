@@ -14,7 +14,7 @@ const about = () => {
           I approach every project with enthusiasm and a strong desire to learn and grow. One thing that truly excites me about programming is debugging — I believe that every bug is an opportunity to learn something new and become a better developer. This mindset has shaped my journey and keeps me motivated to improve my skills every day.
           </span>
           <span>
-          I take pride in writing clean, efficient code and crafting responsive, user-friendly web interfaces that offer both functionality and aesthetic appeal.<i> For me, frontend development is not just about code — it's about creating experiences that connect people with technology </i>.
+          I take pride in writing clean, efficient code and crafting responsive, user-friendly web interfaces that offer both functionality and aesthetic appeal.<i> For me, frontend development is not just about code — it&apos;s about creating experiences that connect people with technology </i>.
           </span>
         </p>
         <Link href="/file/CV.pdf" target="_blank" download>
