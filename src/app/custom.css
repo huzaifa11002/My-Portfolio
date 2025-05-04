@@ -1,0 +1,25 @@
+.btn{
+    position:relative;
+    overflow: hidden;
+    transition: all 0.5s ease-in;
+    
+}
+.btn::after{
+    content: " ";
+    display: block;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateX(-100%);
+    position: absolute;
+    transition: all 0.5s ease-in;
+    z-index: -1;
+    background-color:#c4ef04;
+}
+.btn:hover{
+    color:black;
+}
+.btn:hover::after{
+    transform: translateX(0);
+}
