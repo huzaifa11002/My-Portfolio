@@ -34,17 +34,17 @@ const Header = () => {
                   <Link href="#project">Projects</Link>
                 </li>
                 {/* <li>
-                  <Link href="/contact">Project</Link>
+                  <Link href="/contact">Contact</Link>
                 </li> */}
                 {/* <li>
                   <Link href="/login">Admin Login</Link>
                 </li> */}
               </ul>
             </nav>
-            <div className="md:hidden text-main">
+            <div className="md:hidden text-main flex items-center">
               <Sheet>
                 <SheetTrigger>
-                  <FaBars />
+                  <FaBars  className="w-8 h-8"/>
                 </SheetTrigger>
                 <SheetContent>
                   <SheetHeader>
@@ -65,7 +65,7 @@ const Header = () => {
                             <Link href="#project">Projects</Link>
                           </li>
                           {/* <li>
-                          <Link href="/contact">Project</Link>
+                          <Link href="/contact">Contact</Link>
                         </li> */}
                           {/* <li>
                           <Link href="/login">Admin Login</Link>

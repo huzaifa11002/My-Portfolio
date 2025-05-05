@@ -4,7 +4,8 @@ const about = () => {
   return (
     <div className="mt-20">
       <h2 className="text-2xl font-bold text-main text-center" id="about">About US</h2>
-      <div className="container mx-auto py-10 px-5 xl:px-10 flex flex-col gap-3">
+      <p className='text-xs sm:text-sm lg:text-base text-white text-center my-1'>What&apos;s about me?</p>
+      <div className="container mx-auto py-10 sm:py-14 md:py-20 px-5 xl:px-10 flex flex-col gap-3">
         <span className='font-bold text-main text-sm'>About Me</span>
         <p className=' flex flex-col gap-3 text-xs text-white sm:text-sm lg:text-base leading-5 sm:leading-6 lg:leading-7 my-2'>
           <span>

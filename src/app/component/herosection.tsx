@@ -8,7 +8,7 @@ import "../custom.css";
 
 const HeroSection = () => {
   return (
-    <div className="container mx-auto py-20 flex flex-col-reverse gap-10 xs:flex-row xs:justify-between xs:items-center px-5 xl:px-10">
+    <div className="container mx-auto py-10 sm:py-14 md:py-20 flex flex-col-reverse gap-10 xs:flex-row xs:justify-between xs:items-center px-5 xl:px-10">
       <div className="text-white flex flex-col text-center xs:text-start gap-5 xs:w-1/2">
         <div>
           <span className="text-main font-bold text-sm">Hello,</span>
@@ -41,7 +41,7 @@ const HeroSection = () => {
         </ul>
       </div>
       <div className="flex justify-center xs:justify-end xs:w-1/2">
-        <div className="w-[200px] h-[200px] xs:w-[250px] xs:h-[250px] xl:w-[400px] xl:h-[400px]">
+        <div className="w-[200px] h-[200px] xs:w-[250px] xs:h-[250px]  xl:w-[400px] xl:h-[400px]">
           <Image
             src={MyImage}
             alt="Huzaifa"
