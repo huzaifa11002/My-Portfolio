@@ -1,33 +1,13 @@
-import ProjectCard from "./ProjectCard";
-
-interface Project {
-  title: string;
-  desc: string;
-  github: string;
-  live: string;
-  skills: string[];
-}
-try {
-  
-} catch (error) {
-  
-}
-const res = await fetch("http://localhost:3000/api//project");
-const project = await res.json();
-
-const projects: Project[] = project;
+import ProjectData from "./ProjectData";
 
 const Projects = () => {
+
   return (
     <div className="mt-20">
       <h2 className="text-2xl font-bold text-main text-center" id="project">Projects</h2>
       <p className='text-xs sm:text-sm lg:text-base text-white text-center my-1'>What&apos;s my Projects?</p>
       <div className="container mx-auto py-10 sm:py-14 md:py-20 px-5 xl:px-10">
-        <div className="grid grid-cols-1 gap-5 xs:grid-cols-2">
-          {projects.map((item, index) => (
-            <ProjectCard {...item} key={index} />
-          ))}
-        </div>
+        <ProjectData/>
       </div>
     </div>
   );

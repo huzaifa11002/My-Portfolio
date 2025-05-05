@@ -1,21 +1,6 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-
-const res1 = await fetch("http://localhost:3000/api/education");
-const education = await res1.json();
-
-const res2 = await fetch("http://localhost:3000/api/skill");
-const skill = await res2.json();
-
-interface Education {
-  edu: string;
-  status: string;
-}
-interface Skill {
-  skill: string;
-  status: string;
-}
-const edu: Education[] = education;
-const skills: Skill[] = skill;
+import SkillData from "./SkillData";
+import EducationData from "./EducationData";
 
 const Skills = () => {
   return (
@@ -36,38 +21,10 @@ const Skills = () => {
           </TabsList>
           <div className="my-5">
             <TabsContent value="education">
-              <ul className="flex flex-col gap-3 list-disc list-inside marker:text-main">
-                {edu.map((item, index) => (
-                  <div
-                    className="flex justify-between items-center"
-                    key={index}
-                  >
-                    <li className="text-white uppercase font-bold text-sm xs:text-base">
-                      {item.edu}
-                    </li>
-                    <span className="text-main font-bold text-center uppercase text-sm xs:text-base">
-                      {item.status}
-                    </span>
-                  </div>
-                ))}
-              </ul>
+              <EducationData/>
             </TabsContent>
             <TabsContent value="skills">
-              <ul className="flex flex-col gap-3 list-disc list-inside marker:text-main">
-                {skills.map((item, index) => (
-                  <div
-                    className="flex justify-between items-center"
-                    key={index}
-                  >
-                    <li className="text-white uppercase font-bold text-sm xs:text-base">
-                      {item.skill}
-                    </li>
-                    <span className="text-main font-bold text-center uppercase text-sm xs:text-base">
-                      {item.status}
-                    </span>
-                  </div>
-                ))}
-              </ul>
+              <SkillData />
             </TabsContent>
           </div>
         </Tabs>
