@@ -22,7 +22,7 @@ export async function GET() {
       title: "Portfolio Website",
       desc: "This is my portfoilo website. In this website show about me and my projects.",
       github: "https://github.com/huzaifa11002/My-Portfolio",
-      live: "",
+      live: "https://huzaifaportfolio-coral.vercel.app/",
       skills: ["NextJS", "RESTAPI", "TypeScript", "Tailwind CSS", "Shadcn UI", "React Hook"],
     },
     {

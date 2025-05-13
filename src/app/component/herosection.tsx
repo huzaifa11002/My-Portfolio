@@ -41,13 +41,13 @@ const HeroSection = () => {
         </ul>
       </div>
       <div className="flex justify-center xs:justify-end xs:w-1/2">
-        <div className="w-[200px] h-[200px] xs:w-[250px] xs:h-[250px]  xl:w-[400px] xl:h-[400px]">
+        <div className="w-[200px] h-[200px] xs:w-[250px] xs:h-[250px] xl:w-[400px] xl:h-[400px]">
           <Image
             src={MyImage}
             alt="Huzaifa"
-            className="object-cover rounded-full shadow-lg shadow-main"
-          />
-        </div>
+            className="object-cover rounded-full shadow-main shadow-lg"
+            />
+            </div>
       </div>
     </div>
   );
