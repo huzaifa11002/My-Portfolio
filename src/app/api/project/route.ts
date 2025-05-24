@@ -26,11 +26,25 @@ export async function GET() {
       skills: ["NextJS", "RESTAPI", "TypeScript", "Tailwind CSS", "Shadcn UI", "React Hook"],
     },
     {
+      title: "Flask Portfolio Website",
+      desc: "This is my flask portfoilo and service website. In this website show about, projects, plans, and contact us.",
+      github: "https://github.com/huzaifa11002/flask-app-1",
+      live: "https://flask-app-1-1-4mnd.onrender.com",
+      skills: ["HTML", "CSS", "JavaScript", "Python", "Flask", "Gunicorn"],
+    },
+    {
       title: "Secure Data Encryption",
       desc: "This is my secure data encryption App. In this app, you can secure your data with special passkey and also decrypt your data with same key.",
       github: "https://github.com/huzaifa11002/Secure-Data-Encryption",
       live: "https://secure-data-encryption-huzaifa.streamlit.app/",
       skills: ["Streamlit", "Python", "crypthography", "hashing"],
+    },
+    {
+      title: "Data Filter and File Sweeper",
+      desc: "This is my data filter, file sweeper and much more useful tools App. In this app, you can filter your excel and csv file data and sweep your file into (csv/xlsx), number guessing game for fun, simple and BMI calculations, and Word counter.",
+      github: "https://github.com/huzaifa11002/Growth-Mindset-Challenge",
+      live: "https://growth-mindset-challenge-zvja85yfmxsvhgpe9eobkm.streamlit.app",
+      skills: ["Streamlit", "Python", "pandas", "BytesIO"],
     },
     {
       title: "AI Recipe Generator",
