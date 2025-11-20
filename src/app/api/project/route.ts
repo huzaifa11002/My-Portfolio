@@ -3,6 +3,23 @@ import { NextResponse } from "next/server";
 export async function GET() {
   return await NextResponse.json([
     {
+      title: "Awami Haal",
+      desc: "This is my AI-Powered Citizen Assistant project. In this app you can describe your complain and AI create a complain on your behalf and send to the revelant department.", 
+      github: "https://github.com/huzaifa11002/Awami-Haal",
+      live: "https://awami-haal-pbb4.vercel.app/",
+      skills: [
+        "NextJS",
+        "Python",
+        "Agentic AI",
+        "FastAPI",
+        "Supabase",
+        "TypeScript",
+        "Tailwind CSS",
+        "RESTAPI",
+        "React Hooks",
+      ],
+    },
+    {
       title: "E-commerce Hackathon",
       desc: "This is my hackathon ecommerce project. In this app you can buy products. In this app I use stripe payment gateway for payment and sanity for backend.", 
       github: "https://github.com/huzaifa11002/Hackathon-Q2",

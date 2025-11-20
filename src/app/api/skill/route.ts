@@ -23,6 +23,10 @@ export async function GET() {
       status: "beginner",
     },
     {
+      skill: "Agentic AI",
+      status: "beginner",
+    },
+    {
       skill: "nextjs",
       status: "advance",
     },

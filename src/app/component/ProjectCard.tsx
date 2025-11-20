@@ -1,6 +1,5 @@
 "use client";
 import { FiGithub } from "react-icons/fi";
-import { FaEye } from "react-icons/fa";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -21,8 +20,12 @@ const ProjectCard = (props: Project) => {
 
   useEffect(() => {
     const handleResize = () => {
-      if (window.innerWidth < 640) {
+      if (window.innerWidth < 480) {
+        setWordLimit(12);
+        setSkillItems(4);
+      } else if (window.innerWidth < 640) {
         setWordLimit(15);
+        setSkillItems(5);
       } else if (window.innerWidth < 768) {
         setWordLimit(18);
         setSkillItems(5);
@@ -61,56 +64,59 @@ const ProjectCard = (props: Project) => {
   };
 
   return (
-    <div className="w-full border-main border rounded-md p-3 flex flex-col justify-between gap-5">
-      <div className="flex justify-between gap-5">
+    <div className="w-full h-full border border-gray-700 bg-gray-900/50 backdrop-blur-sm rounded-lg p-4 sm:p-5 flex flex-col justify-between gap-4 sm:gap-5 hover:border-main hover:shadow-lg hover:shadow-main/20 hover:-translate-y-2 transition-all duration-300 group">
+      <div className="flex flex-col gap-3 sm:gap-4">
+        <div className="flex items-start justify-between">
+          <div className="flex-1">
+            <h3 className="font-bold text-base sm:text-lg md:text-xl mb-2 sm:mb-3 text-white group-hover:text-main transition-colors">{props.title}</h3>
+            <p className="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed">{truncatedDesc}
+              {truncated && (
+                <span className="whitespace-nowrap text-main cursor-pointer hover:underline ml-1" onClick={handleParagraph}>
+                  {paragraph ? " Read Less" : " Read More"}
+                </span>
+              )}
+            </p>
+          </div>
+        </div>
+        
         <div>
-          <h3 className="font-bold text-sm sm:text-base mb-2">{props.title}</h3>
-          <p className="text-white text-xs sm:text-sm">{truncatedDesc}
-            {truncated && (
-              <span className="whitespace-nowrap text-main cursor-pointer hover:underline" onClick={handleParagraph}>
-                {paragraph ? " Read Less" : " Read More"}
+          <ul className="flex flex-wrap gap-1.5 sm:gap-2 text-xs">
+            {truncatedSkill.map((item, index) => (
+              <li
+                className="px-2 sm:px-3 py-1 border border-gray-700 text-gray-300 rounded-md hover:border-main hover:text-main hover:scale-105 transition-all"
+                key={index}
+              >
+                {item}
+              </li>
+            ))}
+            {skillItem && (
+              <span
+                className="px-2 sm:px-3 py-1 border border-gray-700 text-gray-300 cursor-pointer hover:border-main hover:text-main rounded-md transition-all"
+                onClick={handleItems}
+              >
+                {items ? "×" : "..."}
               </span>
             )}
-          </p>
-        </div>
-        <div className="flex flex-col gap-3">
-          <Link
-            href={props.github}
-            className="p-2 rounded-full text-center border border-main"
-          >
-            <FiGithub className="text-white" />
-          </Link>
-          <Link
-            href={props.live}
-            className="p-2 rounded-full border border-main"
-          >
-            <FaEye className="text-white" />
-          </Link>
+          </ul>
         </div>
       </div>
-      <div>
-      <ul className="grid grid-cols-3 gap-3 text-[8px] md:text-xs md:grid-cols-3 sm lg:grid-cols-4">
-          {truncatedSkill.map((item, index) => (
-            <li
-              className="p-1 border border-main text-center rounded-3xl md:p-2 overflow-hidden text-ellipsis whitespace-normal"
-              key={index}
-            >
-              {item}
-            </li>
-          ))}
-          {skillItem && (
-            <span
-              className="p-1 border border-main text-center cursor-pointer hover:underline rounded-3xl md:p-2"
-              onClick={handleItems}
-            >
-              {items ? "x" : "..."}
-            </span>
-          )}
-        </ul>
+      
+      <div className="flex gap-2 sm:gap-3 pt-3 border-t border-gray-800">
+        <Link
+          href={props.live}
+          className="flex-1 px-3 sm:px-4 py-2 text-center border border-main text-main text-xs sm:text-sm rounded hover:bg-main hover:text-black hover:scale-105 transition-all duration-300"
+        >
+          Live ~~&gt;
+        </Link>
+        <Link
+          href={props.github}
+          className="p-2 border border-gray-700 text-gray-400 rounded hover:border-main hover:text-main hover:scale-110 hover:rotate-6 transition-all"
+        >
+          <FiGithub className="w-4 h-4 sm:w-5 sm:h-5" />
+        </Link>
       </div>
     </div>
   );
 };
 
 export default ProjectCard;
-

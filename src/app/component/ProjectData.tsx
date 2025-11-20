@@ -37,13 +37,19 @@ const ProjectData = () => {
         }
     
     if(!project) {
-        return <div className="text-white text-center">No Data Found</div>;
+        return <div className="text-white text-center text-sm sm:text-base">No Data Found</div>;
     }
 
   return (
-    <div className="grid grid-cols-1 gap-5 xs:grid-cols-2">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-5 md:gap-6">
           {project.map((item, index) => (
-            <ProjectCard {...item} key={index} />
+            <div 
+              key={index}
+              className="animate-slide-in-up"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
+              <ProjectCard {...item} />
+            </div>
           ))}
         </div>
   )
