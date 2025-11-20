@@ -1,6 +1,5 @@
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import SkillData from "./SkillData";
-import EducationData from "./EducationData";
 
 const Skills = () => {
   return (
