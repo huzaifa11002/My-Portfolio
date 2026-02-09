@@ -3,6 +3,7 @@ import { Poppins } from "next/font/google";
 import "./globals.css";
 import Header from "./component/header";
 import SmoothScroll from "./component/SmoothScroll";
+import ScrollProgress from "./component/ScrollProgress";
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -23,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body className={`${poppins.className} bg-black text-white antialiased page-load`}>
+        <ScrollProgress />
         <SmoothScroll />
-        <Header/>
+        <Header />
         <main className="min-h-screen">
           {children}
         </main>

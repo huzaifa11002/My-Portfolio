@@ -6,16 +6,22 @@ import Contact from "./component/contact";
 import Footer from "./component/footer";
 import ScrollToTop from "./component/ScrollToTop";
 
+import StoryContent from "./component/StoryContent";
+
 export default function Home() {
   return (
-    <>
-      <HeroSection />
-      <Projects />
-      <Skills />
-      <About />
-      <Contact />
-      <Footer />
-      <ScrollToTop />
-    </>
+    <div className="relative">
+
+      <div className="relative z-10">
+        <HeroSection />
+        <StoryContent />
+        <Projects />
+        <Skills />
+        <About />
+        <Contact />
+        <Footer />
+        <ScrollToTop />
+      </div>
+    </div>
   );
 }
